@@ -73,7 +73,7 @@ export default function Home() {
           </Grid>
           <Grid item xs={12}>
             <Box align="center">
-              <Button variant="outlined" component={Link} href="/">
+              <Button variant="contained" component={Link} href="/">
                 Thêm sản phẩm
               </Button>
             </Box>
