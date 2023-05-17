@@ -1,22 +1,21 @@
-'use client'
-import {
-  Button,
-  Container,
-  Grid,
-  Paper,
-  Table,
-  TableBody,
-  TableCell,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Typography,
-  TextField,
-  Box,
-  Divider,
-} from '@mui/material'
+// import {
+//   Button,
+//   Container,
+//   Grid,
+//   Paper,
+//   Table,
+//   TableBody,
+//   TableCell,
+//   TableContainer,
+//   TableHead,
+//   TableRow,
+//   Typography,
+//   TextField,
+//   Box,
+//   Divider,
+// } from '@mui/material'
 
-import Link from 'next/link'
+// import Link from 'next/link'
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein }
@@ -33,7 +32,8 @@ const rows = [
 export default function Home() {
   return (
     <main className="min-h-screen p-8">
-      <Container maxWidth="lg">
+      List product
+      {/* <Container maxWidth="lg">
         <Grid container spacing={1} alignItems="center">
           <Grid item>
             <Link href="/About">
@@ -106,7 +106,7 @@ export default function Home() {
             </TableBody>
           </Table>
         </TableContainer>
-      </Container>
+      </Container> */}
     </main>
   )
 }

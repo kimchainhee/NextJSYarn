@@ -1,7 +1,6 @@
-'use client'
-import { Grid, Container, Typography, IconButton } from '@mui/material'
-import Link from 'next/link'
-import ArrowBackIcon from '@mui/icons-material/ArrowBack'
+// import { Grid, Container, Typography, IconButton } from '@mui/material'
+// import Link from 'next/link'
+// import ArrowBackIcon from '@mui/icons-material/ArrowBack'
 
 export const metadata = {
   title: 'Home',
@@ -11,7 +10,8 @@ export const metadata = {
 export default function About() {
   return (
     <main className="min-h-screen p-8">
-      <Container maxWidth="lg">
+      About
+      {/* <Container maxWidth="lg">
         <Grid container spacing={2} alignItems="center">
           <Grid item>
             <IconButton component={Link} href="/">
@@ -27,7 +27,7 @@ export default function About() {
         <Typography align="center" variant="h6">
           <b>About Page</b>
         </Typography>
-      </Container>
+      </Container> */}
     </main>
   )
 }
