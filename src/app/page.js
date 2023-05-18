@@ -1,21 +1,4 @@
-// import {
-//   Button,
-//   Container,
-//   Grid,
-//   Paper,
-//   Table,
-//   TableBody,
-//   TableCell,
-//   TableContainer,
-//   TableHead,
-//   TableRow,
-//   Typography,
-//   TextField,
-//   Box,
-//   Divider,
-// } from '@mui/material'
-
-// import Link from 'next/link'
+import Link from 'next/link'
 
 function createData(name, calories, fat, carbs, protein) {
   return { name, calories, fat, carbs, protein }
@@ -31,82 +14,70 @@ const rows = [
 
 export default function Home() {
   return (
-    <main className="min-h-screen p-8">
-      List product
-      {/* <Container maxWidth="lg">
-        <Grid container spacing={1} alignItems="center">
-          <Grid item>
-            <Link href="/About">
-              <Typography variant="h6">
-                <b>About</b>
-              </Typography>
-            </Link>
-          </Grid>
-          <Divider orientation="vertical" flexItem sx={{ marginLeft: 1 }} />
-          <Grid item>
-            <Link href="/Blog">
-              <Typography variant="h6">
-                <b>Blog</b>
-              </Typography>
-            </Link>
-          </Grid>
-        </Grid>
-
-        <Typography variant="h6" paragraph align="center">
-          <b>Danh sách sản phẩm</b>
-        </Typography>
-        <Grid container spacing={2}>
-          <Grid item xs={12} sm={6} md>
-            <TextField label="Dessert" size="small" fullWidth />
-          </Grid>
-          <Grid item xs={12} sm={6} md>
-            <TextField label="Calories" size="small" fullWidth />
-          </Grid>
-          <Grid item xs={12} sm={6} md>
-            <TextField label="Fat" size="small" fullWidth />
-          </Grid>
-          <Grid item xs={12} sm={6} md>
-            <TextField label="Carbs" size="small" fullWidth />
-          </Grid>
-          <Grid item xs={12} sm={6} md>
-            <TextField label="Protein" size="small" fullWidth />
-          </Grid>
-          <Grid item xs={12}>
-            <Box align="center">
-              <Button variant="contained" component={Link} href="/">
-                Thêm sản phẩm
-              </Button>
-            </Box>
-          </Grid>
-        </Grid>
-        <br />
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 650 }} aria-label="simple table">
-            <TableHead>
-              <TableRow>
-                <TableCell>Dessert (100g serving)</TableCell>
-                <TableCell align="right">Calories</TableCell>
-                <TableCell align="right">Fat&nbsp;(g)</TableCell>
-                <TableCell align="right">Carbs&nbsp;(g)</TableCell>
-                <TableCell align="right">Protein&nbsp;(g)</TableCell>
-              </TableRow>
-            </TableHead>
-            <TableBody>
-              {rows.map((row) => (
-                <TableRow key={row.name} sx={{ '&:last-child td, &:last-child th': { border: 0 } }}>
-                  <TableCell component="th" scope="row">
-                    {row.name}
-                  </TableCell>
-                  <TableCell align="right">{row.calories}</TableCell>
-                  <TableCell align="right">{row.fat}</TableCell>
-                  <TableCell align="right">{row.carbs}</TableCell>
-                  <TableCell align="right">{row.protein} </TableCell>
-                </TableRow>
-              ))}
-            </TableBody>
-          </Table>
-        </TableContainer>
-      </Container> */}
+    <main className="min-h-screen p-16">
+      <div>
+        <ul>
+          <li style={{ display: 'inline-block' }}>
+            <Link href="/About">About</Link>
+          </li>{' '}
+          |{' '}
+          <li style={{ display: 'inline-block' }}>
+            <Link href="/Blog">Blog</Link>
+          </li>
+        </ul>
+      </div>
+      <br />
+      <div style={{ textAlign: 'center' }}>
+        <b>List product</b>
+      </div>
+      <ul className="mb-1 grid lg:mb-0 lg:grid-cols-5 gap-5">
+        <li style={{ display: 'inline-block' }}>
+          <input type="text" id="fname" name="fname" placeholder="Dessert" />
+        </li>
+        <li style={{ display: 'inline-block' }}>
+          <input type="text" id="fname" name="fname" placeholder="Calories" />
+        </li>
+        <li style={{ display: 'inline-block' }}>
+          <input type="text" id="fname" name="fname" placeholder="Fat" />
+        </li>
+        <li style={{ display: 'inline-block' }}>
+          <input type="text" id="fname" name="fname" placeholder="Carbs" />
+        </li>
+        <li style={{ display: 'inline-block' }}>
+          <input type="text" id="fname" name="fname" placeholder="Protein" />
+        </li>
+      </ul>
+      <input type="submit" value="Submit"></input>
+      <div>
+        <ul className="mt-2 grid lg:mb-0 grid-cols-5 gap-5">
+          <li style={{ display: 'inline-block' }}>
+            <b>Dessert</b>
+          </li>
+          <li style={{ display: 'inline-block' }}>
+            <b>Calories</b>
+          </li>
+          <li style={{ display: 'inline-block' }}>
+            <b>Fat</b>
+          </li>
+          <li style={{ display: 'inline-block' }}>
+            <b>Carbs</b>
+          </li>
+          <li style={{ display: 'inline-block' }}>
+            <b>Protein</b>
+          </li>
+        </ul>
+      </div>
+      <div>
+        {rows.map((row) => (
+          <ul className=" grid lg:mb-0 grid-cols-5 gap-5" key={row.name}>
+            <li>{row.name}</li>
+            <li>{row.calories}</li>
+            <li>{row.fat}</li>
+            <li>{row.carbs}</li>
+            <li>{row.protein}</li>
+          </ul>
+        ))}
+      </div>
     </main>
   )
 }
