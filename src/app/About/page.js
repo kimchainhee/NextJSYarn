@@ -7,7 +7,7 @@ export const metadata = {
 
 export default function About() {
   return (
-    <main className="min-h-screen p-8">
+    <main className="min-h-screen p-16">
       <div>
         <Link href="/">{'<'} About</Link>
       </div>
